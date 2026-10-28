@@ -56,10 +56,9 @@ btnCalc.addEventListener('click',
 //      Convert to a number with parseFloat().
             let sizeCost=0;
             let sizeChoice=document.getElementsByName("rg")
-            for(let i=0; i<sizeChoice; i++){
+            for(let i=0; i<sizeChoice.length; i++){
                 if(sizeChoice[i].checked===true){
-                    sizeCost=sizeChoice.value;
-                    sizeCost=parseFloat(sizeCost);
+                    sizeCost = parseFloat(sizeChoice[i].value);
                 }
             }
 //   b) Count checked toppings:
@@ -92,7 +91,7 @@ btnCalc.addEventListener('click',
     }
 //   d) Calculate total: size + toppings + service fee
     total=sizeCost+price+servicePrice;
-    total=total.toFixed(2);
+    realTotal=total.toFixed(2);
 //   e) Get the customer name from the input with ID "myInput"
     let name=document.getElementById("myInput").value;
 //   f) Display the result in the element with ID "myPara":
@@ -103,7 +102,7 @@ btnCalc.addEventListener('click',
 if (name == ""){
         name = "Customer"
     }
-    document.getElementById("myPara").innerHTML = (name+", your total is $"+total); 
+    document.getElementById("myPara").innerHTML = (name+", your total is $"+realTotal); 
      })
 // STEP 4: Get the "Clear" button by ID ("clearBtn")
 //         Add a click event listener.
