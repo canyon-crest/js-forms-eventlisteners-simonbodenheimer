@@ -116,7 +116,7 @@ const clearBtn = document.getElementById("clearBtn");
 clearBtn.addEventListener("click", function(){
     document.getElementById("myInput").value = "";
     document.getElementById("r3").checked=true;
-    const toppings = document.getElementByName("cb");
+    const toppings = document.getElementsByName("cb");
     for(let i=0; i<toppings.length; i++){
         toppings[i].checked = false;
     }
