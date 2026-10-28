@@ -103,7 +103,8 @@ btnCalc.addEventListener('click',
 if (name == ""){
         name = "Customer"
     }
-    document.getElementById("myPara").innerHTML = (name+", your total is $"+total);
+    document.getElementById("myPara").innerHTML = (name+", your total is $"+total); 
+     })
 // STEP 4: Get the "Clear" button by ID ("clearBtn")
 //         Add a click event listener.
 //         Inside the listener:
@@ -123,4 +124,4 @@ clearBtn.addEventListener("click", function(){
     document.getElementById("serviceSelect").value = "dinein";
     document.getElementById("myPara").innerHTML = "";
 })
-        })
+  
